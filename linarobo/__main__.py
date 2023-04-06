@@ -87,19 +87,20 @@ Are you interested in helping my creator with his efforts to keep me in active d
 buttons = [
     [
         InlineKeyboardButton(
-            text="☆ 𝐀𝐝𝐝 𝐌𝐞 𝐌𝐨𝐢 𝐋𝐮𝐯 ☆",
+            text="add me to ur chat",
             url=f"https://t.me/{dispatcher.bot.username}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="🍁𝐇𝐄𝐋𝐏🍁", callback_data="help_back"),
-        InlineKeyboardButton(text="🍷𝐌𝐔𝐒𝐈𝐂🍷", callback_data="Music_"),
+        InlineKeyboardButton(text="help", callback_data="help_back"),
+        InlineKeyboardButton(text="music·", callback_data="Music_"),
     ],
     [
-        InlineKeyboardButton(text="🌷𝐆𝐑𝐎𝐔𝐏🌷", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="🏡𝐎𝐅𝐅𝐈𝐂𝐄🏡", url=f"https://t.me/thanos_pro"),
+        InlineKeyboardButton(text="support", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="channel", url=f"https://t.me/thanos_pro"),
     ],
-        InlineKeyboardButton(text="🌱𝐒𝐎𝐔𝐑𝐂𝐄🌱", callback_data="lina_"),
+    [
+        InlineKeyboardButton(text="repo", callback_data="lina_"),
     ],
 ]
 
