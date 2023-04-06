@@ -93,14 +93,11 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="help", callback_data="help_back"),
-        InlineKeyboardButton(text="music·", callback_data="Music_"),
     ],
     [
-        InlineKeyboardButton(text="support", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="donate", url=f"https://t.me/thanos_donate/2"),
+        InlineKeyboardButton(text="support", url=f"https://t.me/thanosprosss"),
         InlineKeyboardButton(text="channel", url=f"https://t.me/thanos_pro"),
-    ],
-    [
-        InlineKeyboardButton(text="repo", callback_data="lina_"),
     ],
 ]
 
@@ -216,22 +213,8 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             
-            x=update.effective_message.reply_sticker(
-                "CAACAgUAAxkBAAI33mLYLNLilbRI-sKAAob0P7koTEJNAAIOBAACl42QVKnra4sdzC_uKQQ")
-            x.delete()
             usr = update.effective_user
-            lol = update.effective_message.reply_text(
-                PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
-            )
-            time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠.")
-            time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠..")
-            time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠... ")
-            time.sleep(0.4)
-            lol.delete()
-            
+               
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(buttons),
